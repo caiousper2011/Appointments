@@ -1,0 +1,9 @@
+<mat-list *ngFor="let category of categories">
+  <div mat-subheader>{{ category.title }}</div>
+  <mat-list-item *ngFor="let item of category.items">
+    <mat-icon mat-list-icon>{{ item.icon }}</mat-icon>
+    <div mat-line>{{ item.name }}</div>
+    <div mat-line>{{ item.description }}</div>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>

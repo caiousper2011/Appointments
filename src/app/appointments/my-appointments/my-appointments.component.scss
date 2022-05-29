@@ -1,0 +1,36 @@
+@import "../../../styles.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  mat-card {
+    box-shadow: none;
+
+    mat-card-content.address {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+
+      & > p:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .footer-border {
+      height: 4px;
+      width: 100%;
+      background: mat-color($secondary-color, 500);
+      border-radius: 0 0 4px 4px;
+      transition: linear 0.4s;
+    }
+
+    &:hover {
+      .footer-border {
+        background: mat-color($primary-color, 500);
+      }
+    }
+  }
+}
